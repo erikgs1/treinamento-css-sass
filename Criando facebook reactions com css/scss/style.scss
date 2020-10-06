@@ -59,3 +59,75 @@
 	will-change: transform;
 	opacity: 0;
   }
+  
+.box {
+	position: absolute;
+	left: calc(50% - 150px);
+	top: calc(50% - 50px);
+	width: 300px;
+  }
+  
+  .overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9;
+	visibility: hidden;
+  }
+  
+  .field-reactions:focus ~ .label-reactions {
+	border-color: rgba(88, 144, 255, 0.3);
+  }
+  .field-reactions:checked:focus ~ .label-reactions {
+	border-color: transparent;
+  }
+  
+  .label-reactions {
+	background: url(https://cdn4.iconfinder.com/data/icons/facebook-likes/100/1.png) no-repeat 0 0;
+	border: 2px dotted transparent;
+	display: block;
+	height: 100px;
+	margin: 0 auto;
+	width: 100px;
+	color: transparent;
+	cursor: pointer;
+  }
+  
+.toolbox {
+	background: #fff;
+	height: 52px;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.15);
+	width: 300px;
+	border-radius: 40px;
+	top: -30px;
+	left: 0;
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.15s;
+  }
+  
+.legend-reaction {
+	background: rgba(0, 0, 0, 0.75);
+	border-radius: 10px;
+	box-sizing: border-box;
+	color: #fff;
+	display: inline-block;
+	font-size: 11px;
+	text-overflow: ellipsis;
+	font-weight: bold;
+	line-height: 20px;
+	max-width: 100%;
+	opacity: 0;
+	overflow: hidden;
+	padding: 0 6px;
+	transition: opacity 50ms ease;
+	left: 50%;
+	position: absolute;
+	text-align: center;
+	top: -28px;
+	transform: translateX(-50%);
+  }
+  
