@@ -7,3 +7,55 @@
 	background: #e9eaed;
 	font-family: arial, sans-serif;
   }
+  
+
+.text-desc, [class*="reaction-"], .field-reactions, .field-reactions:checked:focus ~ .text-desc {
+	clip: rect(1px, 1px, 1px, 1px);
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+  
+.field-reactions:focus ~ .text-desc, .box:hover [class*="reaction-"], .field-reactions:checked ~ [class*="reaction-"] {
+	clip: auto;
+	overflow: visible;
+	opacity: 1;
+  }
+  
+.main-title {
+	background: #3a5795;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+	font-size: 16px;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+.text-desc {
+	font-weight: normal;
+	text-align: center;
+	transform: translateY(-50px);
+	white-space: nowrap;
+	font-size: 13px;
+	width: 100%;
+  }
+  
+  [class*="reaction-"] {
+	border: none;
+	background-image: url(http://deividmarques.github.io/facebook-reactions-css/assets/images/facebook-reactions.png);
+	background-color: transparent;
+	display: block;
+	cursor: pointer;
+	height: 48px;
+	position: absolute;
+	width: 48px;
+	z-index: 11;
+	top: -28;
+	transform-origin: 50% 100%;
+	transform: scale(0.1);
+	transition: all 0.3s;
+	outline: none;
+	will-change: transform;
+	opacity: 0;
+  }
